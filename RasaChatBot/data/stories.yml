@@ -1,0 +1,49 @@
+version: "3.1"
+
+stories:
+
+- story: bot_name_story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_identification
+  - action: utter_bot_name
+  - intent: goodbye
+  - action: utter_goodbye
+  
+
+- story: weather long
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather
+  - action: utter_ask_location
+  - intent: city_info
+  - action: utter_getting_weather
+  - action: action_get_weather
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: weather short
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_for_location
+  - action: utter_getting_weather
+  - action: action_get_weather
+  - intent: goodbye
+  - action: utter_goodbye
+  
+
+  
+- story: weather short
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather
+  - action: utter_ask_location
+  - intent: city_info
+  - action: utter_getting_weather
+  - action: action_get_weather  
+  
+
